@@ -22,8 +22,8 @@ const Header = () => {
             <NavLink to={"/home"} className={({isActive})=>`p-5 font-semibold text-[20px] tracking-tighter hover:text-orange-300 ${isActive ? "text-orange-400" : "text-gray-600"}`}>Home</NavLink>
             <NavLink to={"/about"} className={({isActive})=>`p-5 font-semibold text-[20px] tracking-tighter hover:text-orange-300 ${isActive ? "text-orange-400" : "text-gray-600"}`}>About</NavLink>
             <NavLink to={"/contacts"} className={({isActive})=>`p-5 font-semibold text-[20px] tracking-tighter hover:text-orange-300 ${isActive ? "text-orange-400" : "text-gray-600"}`}>Contacts</NavLink>
-            <NavLink to={"/"} className={({isActive})=>`p-2 font-semibold text-[20px] tracking-tighter text-white m-3 rounded-3xl  hover:text-orange-300 ${isActive ? "bg-orange-400" : "bg-blue-600"}`}>Login</NavLink>
-            <NavLink to={"/logout"} onClick={logout} className={({isActive})=>`p-3 font-semibold text-[20px] tracking-tighter text-white m-3 rounded-3xl  hover:text-orange-300 ${isActive ? "bg-orange-400" : "bg-blue-600"}`}><AiOutlinePoweroff/></NavLink>
+            <NavLink to={"/"} className={({isActive})=>`p-2 font-semibold text-[20px] tracking-tighter text-white m-3 rounded-3xl  hover:text-orange-300 ${isActive ? "bg-blue-400" : "bg-blue-600"}`}>Login</NavLink>
+            <NavLink to={"/logout"} onClick={logout} className={({isActive})=>`p-3 font-semibold text-[20px] tracking-tighter text-white m-3 rounded-3xl active:bg-red-800  hover:bg-red-400 ${isActive ? "bg-orange-400" : "bg-red-600"}`}><AiOutlinePoweroff/></NavLink>
           
           </ul>
         </div>
