@@ -14,20 +14,19 @@ import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    // <Route path='/' element={<Layout/>} errorElement={<Navigate to={"/login"}/>}>
-    <Route path='/' element={<Layout/>} errorElement={<ErrorPage/>}>
-      <Route path='/' element={<Login/>}/>
-      <Route path='logout' element={<ProtectedRoute Component={Logout}/>}/>
-      <Route path='home' element={<ProtectedRoute Component={Home}/>}/>
-      <Route path='about' element={<ProtectedRoute Component={About}/>}/>
-      <Route path='contacts' element={<ProtectedRoute Component={Contacts}/>}/>
+    <Route path='/' element={<Login/>} errorElement={<ErrorPage/>}>
+      <Route path='/' element={<ProtectedRoute Component={Layout}/>}>
+        <Route path='logout' element={<Logout/>}/>
+        <Route path='home' element={<Home/>}/>
+        <Route path='about' element={<About/>}/>
+        <Route path='contacts' element={<Contacts/>}/>
+      </Route>
     </Route>
   )
 )
-
+    
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
      <RouterProvider router={router}/>
-
   </React.StrictMode>,
 )
