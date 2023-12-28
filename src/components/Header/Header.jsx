@@ -7,8 +7,12 @@ const Header = () => {
   const navigate = useNavigate()
 
   const logout = () =>{
-    localStorage.removeItem("token")
-    navigate("/")
+    setTimeout(() => {
+      
+      localStorage.removeItem("token")
+      console.log("seti");
+    }, 1000);
+    navigate("/logout")
   }
 
 
